@@ -1,0 +1,46 @@
+.admin-panel,
+.moderation-panel {
+    max-width: 720px;
+    margin: 0 auto 24px;
+}
+
+.moderation-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.moderation-heading h2 {
+    margin-bottom: 12px;
+}
+
+.comment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.comment-actions button,
+.secondary-button {
+    margin-top: 0;
+}
+
+.comment-actions .delete-button {
+    background: #a33434;
+}
+
+.secondary-button {
+    background: #58717f;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .moderation-heading {
+        align-items: flex-start;
+    }
+}

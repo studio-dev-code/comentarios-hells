@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Administração | Beach Hills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin/admin.css">
+    <script type="module" src="admin.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Beach Hills - página pública">
+            <img
+                src="https://irp.cdn-website.com/eba97c45/dms3rep/multi/opt/logo+beach+hills-640w.png"
+                alt="Beach Hills"
+            >
+            <span>Administração</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="titulo-principal">
+            <p class="eyebrow">ÁREA RESTRITA</p>
+            <h1 id="titulo-principal">Moderação de comentários</h1>
+            <p>Entre com a conta autorizada da gerência para publicar ou excluir comentários.</p>
+        </section>
+
+        <section class="panel admin-panel" aria-labelledby="titulo-login">
+            <h2 id="titulo-login">Acesso da gerência</h2>
+            <form id="login-form">
+                <label for="usuario-admin">Usuário</label>
+                <input id="usuario-admin" name="username" type="text" autocomplete="username" required>
+
+                <label for="senha-admin">Senha</label>
+                <input id="senha-admin" name="password" type="password" autocomplete="current-password" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="admin-message" class="status-message" role="status" aria-live="polite">
+                O acesso será habilitado quando o Supabase for configurado.
+            </p>
+            <p class="security-note">Use uma senha forte e exclusiva para cada administrador. Senhas não são guardadas nesta página.</p>
+        </section>
+
+        <section id="moderation-panel" class="panel moderation-panel" aria-labelledby="titulo-pendentes" hidden>
+            <div class="moderation-heading">
+                <h2 id="titulo-pendentes">Comentários aguardando publicação</h2>
+                <button id="logout-button" class="secondary-button" type="button">Sair</button>
+            </div>
+            <p id="queue-message" class="status-message" role="status" aria-live="polite"></p>
+            <div id="pending-list" class="comments-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Beach Hills</p>
+    </footer>
+</body>
+</html>
